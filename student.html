@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بوابة البطل</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card" style="flex-direction: column; text-align: center; background: #E8F5E9;">
+            <img src="student-placeholder.png" width="100" style="border-radius: 50%; border: 4px solid white;">
+            <h2>مرحباً بالبطل: أحمد السعيد</h2>
+            <h1 style="color: var(--primary); font-size: 2.5rem;">✨ 125 نقطة ✨</h1>
+        </div>
+
+        <h2>متجر الهدايا المتاحة</h2>
+        <div class="gift-grid" id="studentGiftsStore">
+            <div class="card gift-card" style="flex-direction: column;">
+                <img src="uploaded-gift.jpg" alt="صورة الهدية الحقيقية">
+                <h3>مصحف جيب فاخر</h3>
+                <p>الرمز: M-101 | التكلفة: 50 نقطة</p>
+                <button class="btn btn-plus" style="width: 100%;" onclick="redeemGift('M-101', 50)">استبدال الهدية فوراً</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

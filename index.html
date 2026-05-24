@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة تحكم المعلم</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="card">
+            <div>
+                <img id="appLogo" src="default-logo.png" width="60" alt="اللوجو">
+                <h1 id="appName">حلقة التحفيظ الرقمية</h1>
+            </div>
+            <button class="btn" onclick="openSettings()">⚙️ إعدادات الهوية</button>
+        </header>
+
+        <h2>إدارة الطلاب والرصد اليومي (+1 / -1)</h2>
+        <div id="studentsList">
+            <div class="card">
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <img src="student-placeholder.png" width="50" style="border-radius: 50%;">
+                    <div>
+                        <h3>أحمد السعيد</h3>
+                        <p>النقاط: <span id="points-1001">125</span></p>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 5px;">
+                    <button class="btn btn-plus" onclick="updatePoints('1001', 1)">+</button>
+                    <button class="btn btn-minus" onclick="updatePoints('1001', -1)">-</button>
+                </div>
+            </div>
+        </div>
+
+        <h2>إدارة متجر الهدايا</h2>
+        <div class="card">
+            <h3>إضافة هدية جديدة</h3>
+            <input type="text" id="giftName" placeholder="اسم الهدية">
+            <input type="number" id="giftPoints" placeholder="النقاط المستحقة">
+            <input type="file" id="giftImage" accept="image/*" capture="environment">
+            <button class="btn btn-plus" onclick="addNewGift()">حفظ الهدية ونشرها</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
