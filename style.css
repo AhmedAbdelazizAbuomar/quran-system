@@ -1,0 +1,62 @@
+/* الألوان العامة: باستيل مريحة للعين */
+:root {
+    --bg-color: #F4F7F6;       /* رمادي مائل للخضرة فاتح جداً */
+    --card-bg: #FFFFFF;        /* أبيض ناصع للبطاقات */
+    --primary: #87A99C;         /* أخضر باستيل هادئ */
+    --accent: #A8DADC;          /* أزرق سماوي فاتح */
+    --text-color: #4A4A4A;      /* رمادي داكن للنصوص بدلاً من الأسود الحاد */
+    --danger: #E63946;          /* أحمر ناعم للخصم والحذف */
+    --success: #52B788;         /* أخضر مبهج للزيادة */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    direction: rtl; /* يدعم اللغة العربية تماماً */
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* بطاقات الطلاب والهدايا */
+.card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* أزرار الزيادة والنقصان */
+.btn {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.btn-plus { background-color: var(--success); color: white; }
+.btn-minus { background-color: var(--danger); color: white; }
+
+/* متجر الهدايا */
+.gift-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+.gift-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
